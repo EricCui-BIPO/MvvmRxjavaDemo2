@@ -3,6 +3,7 @@ package com.example.networkrequest.http;
 import com.example.networkrequest.BuildConfig;
 import com.example.networkrequest.base.BaseResponse;
 import com.example.networkrequest.exception.ApiException;
+import com.example.networkrequest.exception.BaseException;
 import com.example.networkrequest.interceptor.HeaderInterceptor;
 import com.example.networkrequest.interceptor.SSLSocketClient;
 
