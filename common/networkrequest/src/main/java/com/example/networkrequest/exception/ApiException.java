@@ -11,7 +11,7 @@ package com.example.networkrequest.exception;
 /**
  * 错误码
  */
-public class ApiException extends BaseException {
+public class ApiException extends RuntimeException {
 
     public static final String ERROR_CODE_001 = "100001";
     public static final String ERROR_CODE_002 = "100002";

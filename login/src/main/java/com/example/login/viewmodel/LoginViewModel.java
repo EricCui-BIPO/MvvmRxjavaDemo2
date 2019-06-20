@@ -3,6 +3,7 @@ package com.example.login.viewmodel;
 import android.app.Application;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.login.model.LoginEntity;

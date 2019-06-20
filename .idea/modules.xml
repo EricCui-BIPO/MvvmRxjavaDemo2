@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MvvmRxjavaDemo2.iml" filepath="$PROJECT_DIR$/.idea/MvvmRxjavaDemo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/MvvmRxjavaDemo2.iml" filepath="$PROJECT_DIR$/MvvmRxjavaDemo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/library_res/library_res.iml" filepath="$PROJECT_DIR$/common/library_res/library_res.iml" />
-      <module fileurl="file://$PROJECT_DIR$/common/library_res/library_res.iml" filepath="$PROJECT_DIR$/common/library_res/library_res.iml" />
-      <module fileurl="file://$PROJECT_DIR$/login/login.iml" filepath="$PROJECT_DIR$/login/login.iml" />
       <module fileurl="file://$PROJECT_DIR$/login/login.iml" filepath="$PROJECT_DIR$/login/login.iml" />
       <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/common/mvvmlibrary/mvvmlibrary.iml" filepath="$PROJECT_DIR$/common/mvvmlibrary/mvvmlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/mvvmlibrary/mvvmlibrary.iml" filepath="$PROJECT_DIR$/common/mvvmlibrary/mvvmlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/networkrequest/networkrequest.iml" filepath="$PROJECT_DIR$/common/networkrequest/networkrequest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/common/networkrequest/networkrequest.iml" filepath="$PROJECT_DIR$/common/networkrequest/networkrequest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/common/widget/widget.iml" filepath="$PROJECT_DIR$/common/widget/widget.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/widget/widget.iml" filepath="$PROJECT_DIR$/common/widget/widget.iml" />
     </modules>
   </component>

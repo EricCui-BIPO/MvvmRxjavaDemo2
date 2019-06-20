@@ -3,6 +3,7 @@ package com.example.networkrequest.exception;
 public class BaseException extends RuntimeException{
 
     private String errorCode;
+
     private String errorMsg;
 
     public BaseException(String detailMessage) {

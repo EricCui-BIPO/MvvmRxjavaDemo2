@@ -51,7 +51,7 @@ public class MainActivity extends BaseActivity<MainViewModel> {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ARouter.getInstance().build(Constance.ACTIVITY_URL_LOGIN_REGISTER).navigation();
+                ARouter.getInstance().build(Constance.ACTIVITY_URL_LOGIN).navigation();
             }
         });
     }
