@@ -1,2 +1,2 @@
-# MvvmRxjavaDemo2
-support包
+# MVVMRxjavaDemo
+MVVM、RxJava2、LiveEventBus、Arouter
