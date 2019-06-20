@@ -44,7 +44,7 @@ public class BaseObserver<T> extends DisposableObserver<T> {
             } else if (e instanceof NetworkConnectionException) {
                 CommonUtils.showShortToast(Utils.getContext(), "网络状态不佳，请稍后重试");
             } else if (e instanceof ApiException) {
-                ToastUtil.showToast(((ApiException) e).getErrorMsg());
+                ToastUtil.showToast(((ApiException) e).getMessage());
             }
 
         }
