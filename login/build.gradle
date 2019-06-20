@@ -3,7 +3,7 @@ if (isLoginModule.toBoolean()) {
 } else {
     apply plugin: 'com.android.library'
 }
-
+apply plugin:'com.jakewharton.butterknife'
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
@@ -61,6 +61,7 @@ dependencies {
     implementation project(":common:mvvmlibrary")
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
