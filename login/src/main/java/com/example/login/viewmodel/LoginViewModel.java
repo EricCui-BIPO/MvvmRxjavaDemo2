@@ -13,6 +13,7 @@ import com.example.networkrequest.cache.ACache;
 import com.example.networkrequest.cache.EnumKey;
 import com.example.networkrequest.callback.RequestMultiplyCallback;
 import com.example.networkrequest.exception.BaseException;
+import com.example.networkrequest.utils.ToastUtil;
 import com.example.networkrequest.utils.Utils;
 
 import okhttp3.RequestBody;
@@ -34,8 +35,9 @@ public class LoginViewModel extends BaseViewModel<LoginRepository> {
 
             @Override
             public void onFail(BaseException e) {
-
+                ToastUtil.showToast("1111");
             }
+
 
             @Override
             public void onSuccess(LoginEntity entity) {
