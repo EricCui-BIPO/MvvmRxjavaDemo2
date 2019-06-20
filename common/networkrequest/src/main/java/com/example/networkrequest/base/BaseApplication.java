@@ -58,6 +58,7 @@ public class BaseApplication extends Application {
         for (ApplicationDelegate delegate : mAppDelegateList) {
             delegate.onTerminate();
         }
+        ARouter.getInstance().destroy();
     }
 
 

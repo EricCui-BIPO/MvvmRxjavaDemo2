@@ -3,8 +3,15 @@
     package="com.example.login">
 
     <application>
-        <activity android:name=".LoginActivity">
-        </activity>
+        <activity android:name=".view.RegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.LoginAndRegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

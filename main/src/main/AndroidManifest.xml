@@ -3,8 +3,11 @@
     package="com.example.main">
 
     <application>
-        <activity android:name=".view.MainActivity">
-        </activity>
+        <activity android:name=".view.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
     </application>
 
 </manifest>
