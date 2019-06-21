@@ -17,6 +17,6 @@ public class LoginRepository extends BaseRepository {
      * 请求接口-登录
      */
     public void postLogin(RequestBody body, RequestCallback<LoginEntity> callback) {
-        execute(getApi(LoginApi.class).postLogin(body),callback);
+        executeQuietly(getApi(LoginApi.class).postLogin(body),callback);
     }
 }

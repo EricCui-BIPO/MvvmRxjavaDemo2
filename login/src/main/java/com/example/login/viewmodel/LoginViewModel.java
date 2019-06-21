@@ -43,7 +43,7 @@ public class LoginViewModel extends BaseViewModel<LoginRepository> {
             @Override
             public void onSuccess(LoginEntity entity) {
                 ARouter.getInstance()
-                        .build(Constance.ACTIVITY_URL_LOGIN_REGISTER)
+                        .build(Constance.ACTIVITY_URL_CHOOSE_COMPANY)
                         .withFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK)
                         .navigation();
                 ACache.get(Utils.getContext().getApplicationContext()).put(EnumKey.User.USER_TOKEN,entity.getAccessToken());

@@ -3,15 +3,19 @@
     package="com.example.login">
 
     <application>
-        <activity android:name=".view.RegisterActivity"
+        <activity android:name=".view.ChooseCompanyActivity"></activity>
+        <activity
+            android:name=".view.RegisterActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".view.LoginAndRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.LoginAndRegisterActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".view.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.LoginActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

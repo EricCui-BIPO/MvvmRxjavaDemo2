@@ -34,7 +34,6 @@ public class BaseObserver<T> extends DisposableObserver<T> {
 
     @Override
     public void onError(Throwable e) {
-        e.printStackTrace();
         if (requestCallback instanceof RequestMultiplyCallback) {
             RequestMultiplyCallback callback = (RequestMultiplyCallback) requestCallback;
 
@@ -48,7 +47,6 @@ public class BaseObserver<T> extends DisposableObserver<T> {
                 if(((ApiException) e).getErrorMsg().equals("")){
                     callback.onFail(new BaseException(e.getMessage()));
                 }else{
-
                     ToastUtil.showToast(((ApiException) e).getErrorMsg());
                 }
             }

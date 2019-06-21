@@ -330,7 +330,6 @@ public class ApiException extends BaseException {
             case ERROR_CODE_162:
             case ERROR_CODE_163:
             case ERROR_CODE_164:
-            case ERROR_CODE_165:
             case ERROR_CODE_169:
             case ERROR_CODE_171:
             case ERROR_CODE_172:
@@ -438,6 +437,9 @@ public class ApiException extends BaseException {
             case ERROR_CODE_324:
             case ERROR_CODE_327:
                 message = msg;
+                break;
+            case ERROR_CODE_165:
+                message = "";
                 break;
             default:
                 if (msg != null) {

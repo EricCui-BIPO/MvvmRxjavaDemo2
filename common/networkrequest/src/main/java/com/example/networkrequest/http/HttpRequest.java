@@ -21,6 +21,7 @@ import io.reactivex.FlowableTransformer;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
@@ -56,7 +57,7 @@ public class HttpRequest {
     public Retrofit createRetrofit(String baseUrl){
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.MILLISECONDS);
-//        builder.addInterceptor(new HeaderInterceptor());
+        builder.addInterceptor(new HeaderInterceptor());
         //忽略证书
         builder.sslSocketFactory(SSLSocketClient.getSSLSocketFactory());
         builder.hostnameVerifier(SSLSocketClient.getHostnameVerifier());
@@ -82,19 +83,21 @@ public class HttpRequest {
      * @return
      */
     public <T> ObservableTransformer<BaseResponse<T>,T> handleObservableResult(){
-        return  observable ->
-                observable
-                        .subscribeOn(Schedulers.io())
-                        .unsubscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .flatMap(result -> {
-                            if ("0".equals(result.getErrcode())){
-                                return createData(result.getData());
-                            } else {
-                                throw new ApiException(result.getErrcode(),result.getErrmsg());
-                            }
-
+        return  new ObservableTransformer<BaseResponse<T>, T>() {
+            @Override
+            public ObservableSource<T> apply(Observable<BaseResponse<T>> upstream) {
+                return upstream.flatMap(new Function<BaseResponse<T>, ObservableSource<T>>() {
+                    @Override
+                    public ObservableSource<T> apply(BaseResponse<T> result){
+                        if ("0".equals(result.getErrcode())){
+                            return createData(result.getData());
+                        } else {
+                            throw new ApiException(result.getErrcode(),result.getErrmsg());
+                        }
+                    }
                 });
+            }
+        };
     }
 
     /**

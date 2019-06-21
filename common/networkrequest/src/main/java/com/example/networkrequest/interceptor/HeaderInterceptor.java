@@ -40,12 +40,15 @@ public class HeaderInterceptor implements Interceptor {
         }
         AppUtils.AppInfo appInfo = AppUtils.getAppInfo(Utils.getContext());
         String version = appInfo.getVersionName();
-        Request.Builder requestBuilder = original.newBuilder()
-                .addHeader("X-SYSTEM-VERSION", "ANDROID"+version)
-                .addHeader("Accept", "application/json")
-                .addHeader("Content-Type", "application/json; charset=utf-8")
-                .method(original.method(), original.body());
-        return chain.proceed(requestBuilder.build());
+        Request request = original.newBuilder()
+                .header("X-Dk-Token", token)
+                .header("x-flow-id", flowId)
+                .header("X-CompanyId",companyId)
+                .header("X-EmployeeId",employeeId)
+                .header("X-SYSTEM-VERSION", "ANDROID"+version)
+                .method(original.method(), original.body())
+                .build();
+        return chain.proceed(request);
 
     }
 
