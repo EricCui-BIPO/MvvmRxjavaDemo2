@@ -14,6 +14,10 @@ import com.example.login.viewmodel.RegisterViewModel;
 import com.example.mvvmlibrary.base.BaseActivity;
 import com.example.networkrequest.arouter.Constance;
 
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+
 @Route(path = Constance.ACTIVITY_URL_REGISTER)
 public class RegisterActivity extends BaseActivity<RegisterViewModel> {
 
@@ -33,5 +37,6 @@ public class RegisterActivity extends BaseActivity<RegisterViewModel> {
                 ARouter.getInstance().build(Constance.ACTIVITY_URL_LOGIN).navigation();
             }
         });
+
     }
 }

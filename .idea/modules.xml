@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/mvvmlibrary/mvvmlibrary.iml" filepath="$PROJECT_DIR$/common/mvvmlibrary/mvvmlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/networkrequest/networkrequest.iml" filepath="$PROJECT_DIR$/common/networkrequest/networkrequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/widget/widget.iml" filepath="$PROJECT_DIR$/common/widget/widget.iml" />
     </modules>
   </component>

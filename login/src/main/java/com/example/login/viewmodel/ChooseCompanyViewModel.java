@@ -8,6 +8,7 @@ import com.example.login.model.RegisterCompanyEntity;
 import com.example.login.repository.ChooseCompanyRepository;
 import com.example.mvvmlibrary.base.BaseViewModel;
 import com.example.networkrequest.callback.RequestMultiplyCallback;
+import com.example.networkrequest.exception.ApiException;
 import com.example.networkrequest.exception.BaseException;
 import com.example.networkrequest.utils.ToastUtil;
 
@@ -31,7 +32,7 @@ public class ChooseCompanyViewModel extends BaseViewModel<ChooseCompanyRepositor
         mRepository.getCompanyList(new RequestMultiplyCallback<List<RegisterCompanyEntity>>() {
 
             @Override
-            public void onFail(BaseException e) {
+            public void onError(ApiException e) {
                 ToastUtil.showToast("aaa");
             }
 

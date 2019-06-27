@@ -1,5 +1,7 @@
 package com.example.networkrequest.base;
 
+import android.text.TextUtils;
+
 import com.example.networkrequest.callback.RequestCallback;
 import com.example.networkrequest.callback.RequestMultiplyCallback;
 import com.example.networkrequest.exception.ApiException;
@@ -39,8 +41,11 @@ public class BaseSubscriber <T> extends ResourceSubscriber<T> {
             } else if (e instanceof NetworkConnectionException) {
                 ToastUtil.showToast("网络状态不佳，请稍后重试");
             } else if (e instanceof ApiException) {
-                ToastUtil.showToast(e.getMessage());
-                callback.onFail((BaseException) e);
+                if (TextUtils.isEmpty(((ApiException) e).getErrmsg())){
+                    callback.onError((ApiException) e);
+                } else {
+                    ToastUtil.showToast(((ApiException) e).getErrmsg());
+                }
             }
         }
     }
