@@ -228,8 +228,28 @@ public class ApiException extends BaseException {
     public static final String ERROR_CODE_330 = "100330";
     public static final String ERROR_CODE_331 = "100331";
 
+    public String errcode;
+    private String errmsg;
+
+    public String getErrmsg() {
+        return errmsg;
+    }
+
+    public void setErrmsg(String errmsg) {
+        this.errmsg = errmsg;
+    }
+
+    public String getErrcode() {
+        return errcode;
+    }
+
+    public void setErrcode(String errcode) {
+        this.errcode = errcode;
+    }
+
     public ApiException(String resultCode, String msg) {
         this(getApiExceptionMessage(resultCode, msg));
+        this.errcode = resultCode;
     }
 
     public ApiException(String detailMessage) {

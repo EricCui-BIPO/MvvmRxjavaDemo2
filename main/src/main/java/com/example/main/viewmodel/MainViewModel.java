@@ -8,6 +8,7 @@ import android.util.Log;
 import com.example.main.repository.MainRepository;
 import com.example.mvvmlibrary.base.BaseViewModel;
 import com.example.networkrequest.callback.RequestMultiplyCallback;
+import com.example.networkrequest.exception.ApiException;
 import com.example.networkrequest.exception.BaseException;
 
 import java.util.Optional;
@@ -32,7 +33,7 @@ public class MainViewModel extends BaseViewModel<MainRepository> {
         mRepository.requestData(mobile,new RequestMultiplyCallback<Boolean>() {
 
             @Override
-            public void onFail(BaseException e) {
+            public void onError(ApiException e) {
                 Log.e("aaa", "aaa");
             }
 

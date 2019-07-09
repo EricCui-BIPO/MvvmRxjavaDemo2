@@ -13,6 +13,7 @@ import com.example.networkrequest.arouter.Constance;
 import com.example.networkrequest.cache.ACache;
 import com.example.networkrequest.cache.EnumKey;
 import com.example.networkrequest.callback.RequestMultiplyCallback;
+import com.example.networkrequest.exception.ApiException;
 import com.example.networkrequest.exception.BaseException;
 import com.example.networkrequest.utils.ToastUtil;
 import com.example.networkrequest.utils.Utils;
@@ -35,8 +36,9 @@ public class LoginViewModel extends BaseViewModel<LoginRepository> {
         mRepository.postLogin(body,new RequestMultiplyCallback<LoginEntity>() {
 
             @Override
-            public void onFail(BaseException e) {
-                ToastUtil.showToast("1111");
+            public void onError(ApiException e) {
+
+                ToastUtil.showToast(e.getErrcode());
             }
 
 
