@@ -1,10 +1,10 @@
 package com.example.login.adapter;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
+
 import com.example.login.R;
 import com.example.login.model.RegisterCompanyEntity;
 import com.example.networkrequest.utils.RecyclerViewHolder;
-
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import java.util.List;
 
 public class ChooseCompanyAdapter extends BaseQuickAdapter<RegisterCompanyEntity, RecyclerViewHolder> {

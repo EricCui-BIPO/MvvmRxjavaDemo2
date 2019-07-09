@@ -10,6 +10,8 @@ import com.example.mvvmlibrary.base.BaseViewModel;
 import com.example.networkrequest.callback.RequestMultiplyCallback;
 import com.example.networkrequest.exception.BaseException;
 
+import java.util.Optional;
+
 
 public class MainViewModel extends BaseViewModel<MainRepository> {
 
@@ -46,4 +48,5 @@ public class MainViewModel extends BaseViewModel<MainRepository> {
     public MutableLiveData<Boolean> getBooleanMutableLiveData() {
         return booleanLiveData;
     }
+
 }

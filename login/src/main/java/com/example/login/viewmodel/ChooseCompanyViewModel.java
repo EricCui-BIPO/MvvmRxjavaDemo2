@@ -42,6 +42,7 @@ public class ChooseCompanyViewModel extends BaseViewModel<ChooseCompanyRepositor
             @Override
             public void onSuccess(List<RegisterCompanyEntity> companyEntityList) {
                 companyList.setValue(companyEntityList);
+
             }
         });
     }
